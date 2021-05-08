@@ -1,6 +1,6 @@
 class StartUp{
     constructor({server}){
-        this.server = server;
+        this._server = server;
     }
     async start(){
         await this._server.start();

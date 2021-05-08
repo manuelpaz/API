@@ -1,5 +1,6 @@
-const { application } = require('express');
-const container = require('./api/container');
+const container = require("./api/container");
+
+const application = container.resolve("app");
 
 application.start().catch(err => {
     console.log(err);

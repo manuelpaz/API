@@ -9,7 +9,7 @@ class Server{
 
     start(){
         return new Promise((resolve, reject) => {
-            const http = this._express.listen(config.PORT, ()=>{
+            const http = this._express.listen(this._config.PORT, ()=>{
                 const{port} = http.address();
                 console.log("Application running on port" + port);
                 resolve();
@@ -17,3 +17,5 @@ class Server{
         }); 
     }
 }
+
+module.exports = Server;
